@@ -1,17 +1,22 @@
-<%= simple_form_for @task do |f| %>
-  <%#= f.label :title %>
-  <%#= f.text_field :title %>
+<div class="container">
+  <%= simple_form_for @task do |f| %>
+    <%#= f.label :title %>
+    <%#= f.text_field :title %>
 
-  <%#= f.label :details %>
-  <%#= f.text_field :details %>
+    <%#= f.label :details %>
+    <%#= f.text_field :details %>
 
-  <%#= f.label :completed %>
-  <%#= f.check_box :completed %>
+    <%#= f.label :completed %>
+    <%#= f.check_box :completed %>
 
-  <%= f.input :title %>
-  <%= f.input :details %>
-  <%= f.input :completed %>
+    <%= f.input :title %>
+    <%= f.input :details %>
+    <%= f.input :completed %>
 
+    <%= link_to 'Back',
+                tasks_path,
+                :class => "btn btn-primary" %>
 
-  <%= f.submit %>
-<% end %>
+    <%= f.submit class: 'btn btn-success' %>
+  <% end %>
+</div>
